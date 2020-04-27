@@ -19,8 +19,6 @@ light_case :-
     format('nome: ~w \t temperatura: ~d \t freqcardio: ~d \t freqrespiratoria: ~d \t pasistolica: ~d \t sao2: ~d \t dispineia: ~w \t idade: ~d \t comorbidades: ~d',[A,B,C, D,E,F,G,H,I]),
     nl, fail.
 
-
-%Não consegui usar a condição OU (;) para (B < 35;) que é uma condição para casos médios
 average_case :- 
     paciente(A,B,C,D,E,F,G,H,I),
     (B < 35; B >= 37, B =< 39),
@@ -33,7 +31,6 @@ average_case :-
     write('Caso Médio: Deve ficar em casa, em observação por 14 dias!'),
     format('nome: ~w \t temperatura: ~d \t freqcardio: ~d \t freqrespiratoria: ~d \t pasistolica: ~d \t sao2: ~d \t dispineia: ~w \t idade: ~d \t comorbidades: ~d',[A,B,C, D,E,F,G,H,I]),
     nl, fail.
-
 
 severe_case :-
     paciente(A,B,C,D,E,F,G,H,I),
